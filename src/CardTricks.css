@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Lato:wght@100;300;400;700;900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    color:white;
+    font-family: 'DM Mono', monospace;
+    font-family: 'Lato', sans-serif;
+}
+
+.card-list{
+    display: flex;
+    padding: 3rem;
+}
+
+.card{
+    display:flex;
+    position:relative;
+    flex-direction: column;
+    height: 350px;
+    width: 300px;
+    /* border: 1px solid white; */
+    min-width:250px;
+    padding: 1.5rem;
+
+    border-radius: 16px;
+    background-color: rgb(69, 66, 66);
+    box-shadow: -1rem 0 1.5rem rgb(47, 44, 44);
+    transition: all .2s;
+}
+
+.card:hover{
+    /* transform:rotate(5deg);
+    transform: translate(1rem); */
+    /* transform-origin: left;
+    transform: rotate(90deg);
+    transform: translate(50%, 50%); */
+    transform: translateY(-1rem) rotate(2deg) ;
+}
+
+.card:hover~.card{
+    transform: translateX(130px);
+}
+
+.card:not(:first-child){
+    margin-left:-110px;
+}
